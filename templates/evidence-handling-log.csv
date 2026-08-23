@@ -1,0 +1,2 @@
+evidence_id,description,source_system,custodian,collected_by,collection_time_timezone,collection_method,hash_algorithm,hash_value,storage_location,transfer_time,transferred_from,transferred_to,purpose,notes
+EVID-001,"<description>","<source>","<custodian>","<collector>",YYYY-MM-DD HH:MM TZ,"<approved method>",SHA-256,"<hash>","<approved evidence location>","","","","<investigative purpose>",""
