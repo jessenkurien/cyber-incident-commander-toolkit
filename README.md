@@ -1,5 +1,8 @@
 # Cyber Incident Commander Toolkit
 
+[![Quality checks](https://github.com/jessenkurien/cyber-incident-commander-toolkit/actions/workflows/quality.yml/badge.svg)](https://github.com/jessenkurien/cyber-incident-commander-toolkit/actions/workflows/quality.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-0e302a.svg)](LICENSE)
+
 ![Cyber Incident Commander Toolkit](public/og.png)
 
 A practical, leadership-focused toolkit for commanding high-severity cyber incidents with clarity, accountability, and evidence.
