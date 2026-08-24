@@ -101,6 +101,15 @@ pnpm build
 - Preserve original evidence using approved forensic procedures and tooling.
 - Treat framework mappings as a starting point for control owners and auditors to validate.
 
+## Incident leadership series
+
+This project is part of an open-source cyber leadership portfolio:
+
+- **[Cyber Incident Commander Toolkit](https://github.com/jessenkurien/cyber-incident-commander-toolkit)** — coordinates people, objectives, evidence, decisions, and executive communication during a cyber incident.
+- **[The 72-Minute Defense](https://github.com/jessenkurien/72-minute-defense)** — defines which containment actions can be pre-authorized and rehearses whether the organization can act before the attacker's clock expires.
+
+Together, they connect incident command with governed, measurable containment.
+
 ## Contributing
 
 Constructive improvements are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md) and [SECURITY.md](SECURITY.md) before opening an issue or pull request.
