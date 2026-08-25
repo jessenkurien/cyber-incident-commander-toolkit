@@ -18,23 +18,26 @@ This repository combines an interactive incident command workspace with field-re
 - Executive risk communication that separates confirmed facts, working hypotheses, and unknowns
 - Coordination across Security Operations, DFIR, Threat Intelligence, IAM, Cloud, Infrastructure, Legal, Privacy, Communications, and business leadership
 - Evidence preservation and decision traceability suitable for audit and after-action review
-- Operational alignment to NIST Cybersecurity Framework 2.0 and ISO/IEC 27001:2022
+- Framework-informed validation against NIST CSF 2.0, NIST SP 800-61r3, ISO/IEC 27001 and 27035, with conditional continuity, privacy, financial-services, and payment-card overlays
 - Leadership metrics and KRIs that measure outcomes instead of activity volume
 
 ## Interactive command center
 
 The browser-based demo includes:
 
-- Three realistic incident scenarios
+- Four realistic incident scenarios, including a privileged-token compromise in a fictional digital-payments platform
 - A live mission clock and severity context
 - Interactive containment, forensics, and identity actions
 - Workstream progress and local browser persistence
 - A decision log with owner and rationale
 - A configurable Action Authority Matrix with pre-authorized, approval-required, and executive-risk tiers
 - Approval, escalation, accepted-impact, evidence-first, notification, and reassessment records
+- Separate technical execution, decision authority, operational risk acceptance, financial risk acceptance, and privacy or regulatory review
+- Transparent delegated-limit checks: the payments exercise shows why a projected 30-minute interruption exceeds a fictional 15-minute business-owner limit
+- Scenario-level governance results expressed as **valid**, **required**, **gap**, **undetermined**, or **not applicable**—never as a claim of compliance
 - An executive status-update generator
 - A downloadable incident command pack
-- NIST CSF 2.0 and ISO/IEC 27001 alignment
+- NIST CSF 2.0, NIST SP 800-61r3, ISO/IEC 27001 / 27035, ISO 22301, GDPR, DORA, and PCI DSS v4.0.1 decision support
 
 No production data is sent anywhere. Demo state is stored only in the local browser.
 
@@ -44,7 +47,7 @@ No production data is sent anywhere. Demo state is stored only in the local brow
 app/                      Interactive command center
 docs/                     Leadership roles, metrics, and KRIs
 examples/                 Completed sample artifacts
-frameworks/               NIST CSF and ISO/IEC 27001 alignment
+frameworks/               Core mappings and conditional governance overlays
 playbooks/                Command playbook and tabletop exercise
 templates/                Ready-to-copy operational templates
 public/                   Social preview asset
@@ -59,7 +62,9 @@ public/                   Social preview asset
 5. Use the [Decision Log](templates/decision-log.csv) and [Evidence Handling Log](templates/evidence-handling-log.csv) from declaration onward.
 6. Brief leaders with the [Executive Status Update](templates/executive-status-update.md).
 7. Test decision rights and fallback paths with the [SaaS Token Compromise Tabletop](playbooks/tabletop-saas-token-compromise.md).
-8. Close corrective actions through the [After-Action Review](templates/after-action-review.md).
+8. Walk through operational and financial risk acceptance with the [Digital-Payments Token Compromise Tabletop](playbooks/tabletop-digital-payments-token-compromise.md).
+9. Apply the [Governance Validation Overlays](frameworks/governance-validation-overlays.md) only after validating organizational scope and current obligations.
+10. Close corrective actions through the [After-Action Review](templates/after-action-review.md).
 
 ## Incident command principles
 
@@ -75,7 +80,9 @@ public/                   Social preview asset
 
 ## Framework alignment
 
-The toolkit maps operational evidence to the six NIST CSF 2.0 functions—Govern, Identify, Protect, Detect, Respond, and Recover—and relevant ISO/IEC 27001:2022 controls. See the [full alignment](frameworks/nist-csf-iso27001-alignment.md).
+The toolkit maps operational evidence to the six NIST CSF 2.0 functions—Govern, Identify, Protect, Detect, Respond, and Recover—and relevant ISO/IEC 27001:2022 controls. It also uses NIST SP 800-61r3 and ISO/IEC 27035-1:2023 as incident-response references. The digital-payments scenario conditionally surfaces ISO 22301:2019, GDPR, DORA, and PCI DSS v4.0.1 for validation by the appropriate owners.
+
+See the [core framework alignment](frameworks/nist-csf-iso27001-alignment.md) and [governance validation overlays](frameworks/governance-validation-overlays.md).
 
 Framework references are implementation aids, not claims of certification or complete compliance.
 
@@ -105,6 +112,7 @@ pnpm build
 - Do not place secrets, credentials, personal data, regulated data, or sensitive evidence in the demo.
 - Preserve original evidence using approved forensic procedures and tooling.
 - Treat framework mappings as a starting point for control owners and auditors to validate.
+- Treat GDPR, DORA, PCI DSS, notification, and materiality indicators as prompts for qualified Legal, Privacy, Compliance, and contractual review—not automated legal conclusions.
 - Treat every authority rule, role, threshold, impact ceiling, and deadline as illustrative until formally approved by the adopting organization.
 - The interactive demo records authority outcomes; it does not execute containment or independently grant legal authority.
 

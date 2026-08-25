@@ -6,6 +6,20 @@ During a cyber incident, the hard question is often not who can perform a techni
 
 The Action Authority Matrix makes those boundaries visible before the mission clock is working against the organization. It supports faster escalation and more defensible decisions; it does not itself grant legal authority or execute containment.
 
+## Five distinct responsibilities
+
+Do not assume that one title owns every part of a high-impact decision:
+
+| Responsibility | Question answered | Digital-payments example |
+|---|---|---|
+| Technical executor | Who can safely perform the action? | Payments Engineering suspends or restores the integration. |
+| Decision authority | Who may authorize the action under policy? | COO and CFO approve an interruption above the delegated limit, advised by the CISO. |
+| Operational risk owner | Who accepts service and customer disruption? | Head of Payments and COO accept the operational consequence. |
+| Financial risk owner | Who accepts material revenue, liquidity, settlement, or contractual impact? | CFO accepts the financial consequence. |
+| Legal, privacy, or regulatory advisor | Who determines whether facts activate an obligation or protected process? | Legal, Privacy / DPO, and Compliance assess applicability; they do not replace the technical executor. |
+
+The CISO owns the security recommendation and explains the cyber risk. That does not automatically give the CISO authority to accept a payment outage on behalf of the business. Likewise, the technical team may be able to execute a tenant-wide revocation but should not silently inherit the authority to accept its business consequences.
+
 ## Four operating states
 
 | State | Meaning | Expected response |
@@ -23,11 +37,13 @@ For each consequential action, control owners, business owners, Legal, Privacy, 
 2. The incident facts or thresholds that activate the rule.
 3. The delegated authority and business-impact ceiling.
 4. The person or role that accepts impact beyond that ceiling.
-5. Any two-person, legal, privacy, safety, or customer-protection requirement.
-6. The maximum approval wait and the fallback when authority is unavailable.
-7. Evidence that must be preserved before execution when feasible.
-8. Required internal and external notifications.
-9. The reassessment, expiry, reversal, or recovery trigger.
+5. The risk of acting and the risk of not acting.
+6. The method used to estimate the projected operational impact and the confidence of that estimate.
+7. Any two-person, legal, privacy, safety, continuity, financial, or customer-protection requirement.
+8. The maximum approval wait and the fallback when authority is unavailable.
+9. Evidence that must be preserved before execution when feasible.
+10. Required internal and external notifications.
+11. The reassessment, expiry, reversal, or recovery trigger.
 
 The editable starting point is [templates/action-authority-matrix.csv](../templates/action-authority-matrix.csv). Every row is illustrative and must be replaced or approved for the adopting organization.
 
@@ -41,6 +57,26 @@ The editable starting point is [templates/action-authority-matrix.csv](../templa
 6. Record the authority exercised, rationale, accepted impact, timestamp, and outcome.
 7. Notify the identified stakeholders and schedule the reassessment or reversal.
 8. Export the incident command pack with the applied rule and decision record.
+
+## How an impact threshold works
+
+“Estimated impact exceeds delegated threshold” should always resolve to visible, reviewable values—not an unexplained score.
+
+The digital-payments tabletop uses a fictional policy in which the Head of Payments may accept up to **15 minutes** of payment-processing interruption. The technical team’s exercise estimate is **30 minutes**, with medium confidence. Because 30 exceeds 15, the Head of Payments cannot authorize the action alone: the sample crisis policy routes the decision to the COO and CFO, advised by the CISO.
+
+This comparison is intentionally simple. A real organization might also use transaction volume, revenue at risk, customer count, market criticality, safety, liquidity, contractual penalties, recovery uncertainty, or regulatory thresholds. The source, owner, timestamp, and confidence of each estimate should be recorded. Never present the fictional values as a benchmark or legal threshold.
+
+## Governance validation language
+
+The interface uses a narrow status vocabulary:
+
+- **Valid:** the sample record contains the mapped decision evidence; this does not establish compliance.
+- **Required:** the incident facts make an organizational review or action necessary.
+- **Gap:** required decision evidence or risk acceptance is missing.
+- **Undetermined:** applicability depends on facts or scope that have not been validated.
+- **Not applicable:** a qualified owner has documented why the requirement does not apply.
+
+Framework mappings are decision-support prompts. Current law, regulation, contracts, policies, technical dependencies, jurisdiction, and qualified professional judgment govern the real decision.
 
 ## What the toolkit does not do
 

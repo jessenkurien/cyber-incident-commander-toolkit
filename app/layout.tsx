@@ -13,7 +13,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const origin = `${protocol}://${host}`;
   const image = `${origin}/og.png`;
   const title = "Cyber Incident Commander Toolkit";
-  const description = "A practical, leadership-focused workspace for commanding cyber incidents with clarity, accountability, and evidence.";
+  const description = "An open-source cyber incident command workspace for decision rights, risk acceptance, executive communication, evidence, and operational resilience.";
 
   return {
     metadataBase: new URL(origin),
@@ -21,7 +21,7 @@ export async function generateMetadata(): Promise<Metadata> {
     description,
     authors: [{ name: "Jessen Kurien", url: "https://github.com/jessenkurien" }],
     creator: "Jessen Kurien",
-    keywords: ["cyber incident response", "incident command", "cyber risk management", "DFIR", "NIST CSF", "ISO 27001", "security leadership"],
+    keywords: ["cyber incident response", "cyber crisis management", "incident command", "decision rights", "cyber risk management", "operational resilience", "digital payments security", "DFIR", "NIST CSF 2.0", "NIST SP 800-61r3", "ISO 27001", "ISO 27035", "DORA", "PCI DSS", "security leadership"],
     openGraph: { title, description, type: "website", images: [{ url: image, width: 1732, height: 909, alt: "Cyber Incident Commander Toolkit" }] },
     twitter: { card: "summary_large_image", title, description, images: [image] },
   };
