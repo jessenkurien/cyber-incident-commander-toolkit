@@ -34,7 +34,7 @@ R = Responsible, A = Accountable, C = Consulted, I = Informed.
 
 ## Delegation checklist
 
-Before an incident, document:
+Before an incident, document and approve these boundaries in the [Action Authority Matrix](../templates/action-authority-matrix.csv):
 
 - Severity declaration authority
 - Emergency-change authority
@@ -42,5 +42,7 @@ Before an incident, document:
 - External DFIR, counsel, insurer, regulator, and law-enforcement engagement paths
 - Customer and public communications approval
 - Risk acceptance and incident closure authority
+
+See the [Decision Rights Operating Model](decision-rights-operating-model.md) for activation conditions, impact ceilings, approval windows, fallback paths, evidence requirements, and reassessment triggers.
 
 Avoid assigning one person conflicting roles that compromise evidence independence, legal review, or business validation.

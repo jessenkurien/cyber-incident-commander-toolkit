@@ -13,11 +13,13 @@ test("ships the core command artifacts", async () => {
     "playbooks/incident-command-playbook.md",
     "playbooks/tabletop-saas-token-compromise.md",
     "templates/incident-action-plan.md",
+    "templates/action-authority-matrix.csv",
     "templates/executive-status-update.md",
     "templates/decision-log.csv",
     "templates/evidence-handling-log.csv",
     "templates/after-action-review.md",
     "frameworks/nist-csf-iso27001-alignment.md",
+    "docs/decision-rights-operating-model.md",
     "public/og.png",
   ];
 
@@ -33,6 +35,13 @@ test("interactive workspace is local-first and leadership focused", async () => 
   assert.match(source, /Commander.{0,20}intent/i);
   assert.match(source, /Executive status update/i);
   assert.match(source, /Decision queue/i);
+  assert.match(source, /Decision rights/i);
+  assert.match(source, /Act now/i);
+  assert.match(source, /Approval required/i);
+  assert.match(source, /Executive risk decision/i);
+  assert.match(source, /authorityOutcomes/);
+  assert.match(source, /Evidence to preserve first/i);
+  assert.match(source, /Fallback if authority is unavailable/i);
   assert.match(source, /Evidence integrity/i);
   assert.match(source, /NIST CSF 2\.0/);
   assert.match(source, /ISO\/IEC 27001/);
@@ -51,11 +60,16 @@ test("metadata is project-specific and starter markers are removed", async () =>
   assert.doesNotMatch(layout + page + packageJson, /Starter Project|codex-preview|react-loading-skeleton/);
 });
 
-test("CSV logs contain governance and evidence fields", async () => {
-  const [decisions, evidence] = await Promise.all([
+test("CSV logs and authority matrix contain decision, evidence, and escalation fields", async () => {
+  const [decisions, evidence, authority] = await Promise.all([
     read("templates/decision-log.csv"),
     read("templates/evidence-handling-log.csv"),
+    read("templates/action-authority-matrix.csv"),
   ]);
-  assert.match(decisions.split("\n")[0], /decision_authority.*rationale.*reassessment_trigger/);
+  assert.match(decisions.split("\n")[0], /authority_rule_id.*authority_outcome.*decision_authority.*business_impact_accepted.*rationale.*reassessment_trigger/);
   assert.match(evidence.split("\n")[0], /custodian.*collection_method.*hash_value.*transferred_to/);
+  assert.match(authority.split("\n")[0], /activation_conditions.*executor.*authority_tier.*decision_authority.*business_impact_ceiling.*approval_window.*fallback_if_authority_unavailable.*evidence_to_preserve_first.*reassessment_or_reversal_trigger/);
+  assert.match(authority, /Pre-authorized/);
+  assert.match(authority, /Approval required/);
+  assert.match(authority, /Executive risk decision/);
 });

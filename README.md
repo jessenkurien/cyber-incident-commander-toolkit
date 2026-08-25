@@ -5,7 +5,7 @@
 
 ![Cyber Incident Commander Toolkit](public/og.png)
 
-A practical, leadership-focused toolkit for commanding high-severity cyber incidents with clarity, accountability, and evidence.
+A practical, leadership-focused toolkit for commanding high-severity cyber incidents with clear decision rights, accountability, and evidence.
 
 This repository combines an interactive incident command workspace with field-ready templates for incident response, digital forensics, executive communications, decision governance, cyber risk management, and post-incident improvement.
 
@@ -14,6 +14,7 @@ This repository combines an interactive incident command workspace with field-re
 ## What this project demonstrates
 
 - Incident command under pressure: objectives, roles, workstreams, decisions, and briefing cadence
+- Breach-specific decision rights: what responders may do now, what requires approval, and who accepts business impact
 - Executive risk communication that separates confirmed facts, working hypotheses, and unknowns
 - Coordination across Security Operations, DFIR, Threat Intelligence, IAM, Cloud, Infrastructure, Legal, Privacy, Communications, and business leadership
 - Evidence preservation and decision traceability suitable for audit and after-action review
@@ -29,6 +30,8 @@ The browser-based demo includes:
 - Interactive containment, forensics, and identity actions
 - Workstream progress and local browser persistence
 - A decision log with owner and rationale
+- A configurable Action Authority Matrix with pre-authorized, approval-required, and executive-risk tiers
+- Approval, escalation, accepted-impact, evidence-first, notification, and reassessment records
 - An executive status-update generator
 - A downloadable incident command pack
 - NIST CSF 2.0 and ISO/IEC 27001 alignment
@@ -50,18 +53,20 @@ public/                   Social preview asset
 ## Start with the operating model
 
 1. Review the [Incident Command Playbook](playbooks/incident-command-playbook.md).
-2. Assign authorities using [Roles and RACI](docs/roles-and-raci.md).
-3. Copy the [Incident Action Plan](templates/incident-action-plan.md) for the first operational period.
-4. Use the [Decision Log](templates/decision-log.csv) and [Evidence Handling Log](templates/evidence-handling-log.csv) from declaration onward.
-5. Brief leaders with the [Executive Status Update](templates/executive-status-update.md).
-6. Test the model with the [SaaS Token Compromise Tabletop](playbooks/tabletop-saas-token-compromise.md).
-7. Close corrective actions through the [After-Action Review](templates/after-action-review.md).
+2. Assign responsibilities using [Roles and RACI](docs/roles-and-raci.md).
+3. Configure and approve the [Action Authority Matrix](templates/action-authority-matrix.csv) using the [Decision Rights Operating Model](docs/decision-rights-operating-model.md).
+4. Copy the [Incident Action Plan](templates/incident-action-plan.md) for the first operational period.
+5. Use the [Decision Log](templates/decision-log.csv) and [Evidence Handling Log](templates/evidence-handling-log.csv) from declaration onward.
+6. Brief leaders with the [Executive Status Update](templates/executive-status-update.md).
+7. Test decision rights and fallback paths with the [SaaS Token Compromise Tabletop](playbooks/tabletop-saas-token-compromise.md).
+8. Close corrective actions through the [After-Action Review](templates/after-action-review.md).
 
 ## Incident command principles
 
 | Principle | Applied behavior |
 |---|---|
 | One accountable commander | A named leader owns objectives, tradeoffs, cadence, and escalation. |
+| Authority before urgency | Responders know what can happen now, what must be approved, and who accepts impact beyond delegated limits. |
 | Evidence over assumption | Briefings distinguish facts, hypotheses, and unknowns. |
 | Business impact first | Technical findings are translated into operational, customer, financial, legal, and trust impacts. |
 | Decisions are durable records | Authority, rationale, evidence, expected outcome, and review trigger are captured. |
@@ -100,6 +105,8 @@ pnpm build
 - Do not place secrets, credentials, personal data, regulated data, or sensitive evidence in the demo.
 - Preserve original evidence using approved forensic procedures and tooling.
 - Treat framework mappings as a starting point for control owners and auditors to validate.
+- Treat every authority rule, role, threshold, impact ceiling, and deadline as illustrative until formally approved by the adopting organization.
+- The interactive demo records authority outcomes; it does not execute containment or independently grant legal authority.
 
 ## Incident leadership series
 

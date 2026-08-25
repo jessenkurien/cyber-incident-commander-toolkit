@@ -4,6 +4,8 @@
 
 Evaluate leadership decisions, identity containment, digital-forensics coordination, evidence discipline, and executive communications during a suspected privileged OAuth token compromise.
 
+Use the [sample Action Authority Matrix](../templates/action-authority-matrix.csv) to test what responders may do immediately, what requires approval, who accepts business impact, and what fallback applies when authority is unavailable. Replace sample roles and thresholds with organization-approved values before an operational exercise.
+
 ## Audience
 
 Incident Commander, Security Operations, DFIR, IAM, Threat Intelligence, Cloud, Legal, Privacy, Communications, business continuity, executive sponsor, and an observer/scribe.
@@ -44,6 +46,8 @@ All names, systems, and indicators in this exercise are fictional.
 - A major board meeting begins in 45 minutes.
 
 **Decision:** Revoke all executive OAuth grants, only confirmed grants, or take another approach? Record tradeoffs and authority.
+
+**Authority test:** Identify whether targeted revocation remains within delegated authority, who must approve tenant-wide revocation, the maximum acceptable approval wait, and the lower-impact fallback while escalation continues.
 
 ### Inject 3 — 09:30: Business and legal pressure
 
