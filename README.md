@@ -41,10 +41,32 @@ The browser-based demo includes:
 
 No production data is sent anywhere. Demo state is stored only in the local browser.
 
+## Command-line rehearsal
+
+The dry-run CLI demonstrates the same leadership problem from a terminal: lower-impact containment continues, a projected service interruption crosses a delegated limit, the decision routes to operational and financial risk owners, governance findings update, and an incident pack is exported.
+
+```bash
+pnpm cli scenario
+pnpm cli authority
+pnpm cli detail
+pnpm cli decide --operational "Head of Payments + COO" --financial "CFO"
+pnpm cli validate
+pnpm cli export
+```
+
+Run the complete synthetic workflow with:
+
+```bash
+pnpm demo:payments
+```
+
+The CLI is a **dry-run rehearsal runner**. It makes no network calls, contains no production adapters, and never executes identity, payment, cloud, endpoint, or containment actions. Its default state remains under the ignored `work/` directory; its incident-pack output remains under the ignored `outputs/` directory.
+
 ## Repository map
 
 ```text
 app/                      Interactive command center
+cli/                      Dry-run command-line rehearsal
 docs/                     Leadership roles, metrics, and KRIs
 examples/                 Completed sample artifacts
 frameworks/               Core mappings and conditional governance overlays
