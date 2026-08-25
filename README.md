@@ -5,9 +5,12 @@
 
 ![Cyber Incident Commander Toolkit](public/og.png)
 
+> [!IMPORTANT]
+> **Reference implementation for research, evaluation and organizational adaptation. Dry-run by default. Not a substitute for organization-specific legal, regulatory or production-security review.**
+
 A practical, leadership-focused toolkit for commanding high-severity cyber incidents with clear decision rights, accountability, and evidence.
 
-This repository combines an interactive incident command workspace with field-ready templates for incident response, digital forensics, executive communications, decision governance, cyber risk management, and post-incident improvement.
+This repository combines an interactive incident command workspace with adaptable sample templates for incident response, digital forensics, executive communications, decision governance, cyber risk management, and post-incident improvement.
 
 > **Purpose:** demonstrate how strong incident leadership connects technical response to business risk—not replace an organization’s approved incident response plan, legal advice, or forensic procedures.
 
@@ -138,6 +141,20 @@ pnpm build
 - Treat every authority rule, role, threshold, impact ceiling, and deadline as illustrative until formally approved by the adopting organization.
 - The interactive demo records authority outcomes; it does not execute containment or independently grant legal authority.
 
+## Community and commercial use
+
+### Community / reference implementation
+
+This public repository provides a dry-run demonstration, sample operating model, templates, and fictional exercises under the MIT License. Teams may use it to research, evaluate, rehearse, and adapt incident-command practices. Each organization remains responsible for validating its implementation, integrations, authority model, legal and regulatory obligations, production-security controls, and operating procedures.
+
+### Commercial implementation, integration, and advisory services
+
+Organization-specific services are separate from this community reference implementation. They may include authority-model design, incident-command assessments, tabletop exercises, implementation planning, enterprise integrations, and controlled pilots. No commercial support, warranty, service level, production deployment, or organization-specific validation is included with the public repository.
+
+## Commercial contact
+
+Organizations interested in authority-model design, incident-command assessments, tabletop exercises, or implementation pilots may contact the project author through [Jessen Kurien's GitHub profile](https://github.com/jessenkurien).
+
 ## Incident leadership series
 
 This project is part of an open-source cyber leadership portfolio:
@@ -154,6 +171,10 @@ Constructive improvements are welcome. Please read [CONTRIBUTING.md](CONTRIBUTIN
 ## Author
 
 Created by [Jessen Kurien](https://github.com/jessenkurien), a cybersecurity leader focused on incident response, security operations, threat intelligence, cyber risk management, and resilient decision-making.
+
+## Copyright and citation
+
+Copyright (c) 2026 Jessen Kurien. If this repository informs research, evaluation, training, or another publication, please cite it using [CITATION.cff](CITATION.cff). Citation is appreciated but does not replace the attribution and notice requirements in the license.
 
 ## License
 

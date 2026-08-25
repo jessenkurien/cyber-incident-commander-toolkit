@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this software or its materials, please cite it using this metadata."
+title: "Cyber Incident Commander Toolkit"
+type: software
+authors:
+  - family-names: "Kurien"
+    given-names: "Jessen"
+version: "0.4.0"
+date-released: "2026-08-23"
+repository-code: "https://github.com/jessenkurien/cyber-incident-commander-toolkit"
+url: "https://github.com/jessenkurien/cyber-incident-commander-toolkit"
+license: MIT
+abstract: >-
+  A leadership-focused reference implementation for rehearsing cyber-incident
+  command, decision rights, risk ownership, evidence capture, and executive
+  communication through a dry-run interface, command-line workflow, sample
+  templates, and fictional scenarios.
+keywords:
+  - cyber incident response
+  - incident command
+  - decision rights
+  - cyber risk management
+  - tabletop exercise
+  - security governance

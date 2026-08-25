@@ -17,4 +17,6 @@ Contributions should make incident command clearer, safer, or more measurable.
 3. Run `pnpm test`, `pnpm lint`, and `pnpm build`.
 4. Explain what changed, why it matters, and how it was validated.
 
+Suspected vulnerabilities must follow [SECURITY.md](SECURITY.md). Do not disclose vulnerability details in a public issue, discussion, or pull request.
+
 By contributing, you agree that your contribution may be distributed under the MIT License.
